@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Compliment Generator</title>
+  
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      background: linear-gradient(135deg, #f0e4ff, #c5e3ff);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      color: #4A4A4A;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      font-size: 1.2rem;
+      cursor: pointer;
+      border-radius: 10px;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .compliment {
+      margin-top: 30px;
+      font-size: 1.8rem;
+      color: #333;
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 60%;
+      max-width: 600px;
+    }
+
+    footer {
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Need a Compliment?</h1>
+  <button onclick="generateCompliment()">Get a Compliment</button>
+
+  <p class="compliment" id="compliment">Click the button to get a compliment!</p>
+
+  <!-- Website link in the footer -->
+  <footer>
+    <p>Are you in a hurry for a delicious Albaik meal? Check out here : <a href="https://menualbaik.com" target="_blank" style="color: #4CAF50;">Visit Here</a></p>
+  </footer>
+
+  <script>
+    const compliments = [
+      "You're an awesome person!",
+      "Your smile can light up a room!",
+      "You have a heart of gold.",
+      "You are more amazing than you realize.",
+      "You bring out the best in people.",
+      "You are like sunshine on a cloudy day.",
+      "You're a gift to those around you.",
+      "You're stronger than you think.",
+      "You are a true inspiration.",
+      "You make the world a better place.",
+      "You're more fun than bubble wrap!",
+      "You have impeccable taste.",
+      "You're someone's reason to smile.",
+      "Your kindness is contagious.",
+      "You make everything better.",
+      "You deserve all the good things."
+    ];
+
+    function generateCompliment() {
+      const randomIndex = Math.floor(Math.random() * compliments.length);
+      document.getElementById('compliment').innerText = compliments[randomIndex];
+    }
+  </script>
+
+</body>
+</html>
